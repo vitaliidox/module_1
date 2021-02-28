@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!-------------------Task1-->
+<!--
+    <form>
+      <input id="numb" type="text" placeholder="Введи число">
+      <br>
+      <input id="but" type="button" value="суммировать">
+    </form>
+
+    <script>
+        but.onclick = function(){
+           let numb = document.getElementById(`numb`).value;
+            let str = numb.split("");
+
+            let x=0;
+            for(let i=0;i<str.length;i++){
+
+                x+=parseInt(str[i]);
+            }
+            alert(x);
+        }
+    </script>
+-->
+
+<!-------------------Task2-->
+<!--
+
+    <form>
+      <input id="numb1" type="text" placeholder="Введи число 1">
+      <input id="numb2" type="text" placeholder="Введи число 2">
+      <br>
+      <input id="but" type="button" value="найти">
+    </form>
+
+    <script>
+        but.onclick = function(){
+            let first = parseInt(document.getElementById(`numb1`).value);
+            let second = parseInt(document.getElementById(`numb2`).value);
+
+
+            for(;first&&second!=0;){
+
+                    if(first%second==0){
+                        alert(second);
+                        break;
+                    }else if(second%first==0){
+                        alert(first);
+                        break;
+                    }else {
+                        alert(1);
+                        break;
+                    }
+               break;
+            }
+
+            for(;first||second==0;){
+                    if(first==0){
+                        alert(second);
+                        break;
+                    }else if(second==0){
+                        alert(first);
+                        break;
+                    }
+                break;
+            }
+
+    }
+    </script>
+-->
+
+<!-------------------Task3-->
+<!--
+<form>
+    <input id="numb" type="text" placeholder="input number">
+    <input id="click" type="button" value="press">
+</form>
+<script>
+click.onclick = function(){
+    let number = document.getElementById(`numb`).value;
+    let divisor=[];
+    for(let i=1; i<=number; i++){
+        if(number%i==0){
+           divisor.push(i);
+        }else(divisor)
+    }
+    alert(divisor);
+}
+
+</script>
+-->
+
+<!-------------------Task4-->
+<!--
+<script>
+let number= +prompt("Input number");
+let i=0;
+
+ do{
+     number/=10;
+     i++;
+ }while(number>1)
+alert(i);
+</script>
+-->
+
+<!-------------------Task5-->
+<!--Перебираю цифры-->
+<!--
+<script>
+let positive = 0;
+let negative = 0;
+let zero = 0;
+let number;
+let i;
+    function operation(){
+        for(i=1; i<=10; i++){
+            number = prompt("input 10 numbers");
+            for(let e=0; e<number.length; e++){
+                if(number[e]=="-"){
+                    negative++;
+                    positive--;
+                }else if(number[e]==0){
+                    zero++;
+                }else if(number[e]>0){
+                    positive++;
+                }
+            }
+        }
+console.log("positive numbers="+positive," negative numbers="+negative," zero="+zero);
+    }
+operation();
+</script>
+-->
+
+<!-------------------Task6-->
+<!--
+<script>
+function calculation (){
+let calc;
+   do{
+            let numb1 = prompt("input first number");
+            let numb2 = prompt("input second number");
+            let sign = prompt("input sign");
+
+    if(sign=="+"){
+        calc = numb1+numb2;
+    }else if(sign=="-"){
+        calc = numb1-numb2;
+    }else if(sign=="/"){
+        calc = numb1-numb2;
+    }else if(sign=="*"){
+        calc = numb1*numb2;
+    }
+    }while(confirm("Result="+calc+" Continue?"));
+}
+    calculation();
+</script>
+-->
+
+
+<!-------------------Task7-->
+<!--
+<script>
+    let str = prompt("Numbers");
+    let numbs = prompt("Numeral");
+    alert(str.slice(numbs)+str.slice(0,numbs));
+</script>
+--->
+<!--
+<script>
+    function turn(){
+        let arr = prompt("Numbers");
+        let numbs = prompt("Numeral");
+        let newArr = arr.split("");
+        let ar;
+        for (let i=0;i<numbs;i++){
+           ar = newArr.shift([i]);
+                newArr.push(ar);
+        }
+        alert(newArr.join(""));
+    }
+    turn();
+</script>
+-->
+
+<!-------------------Task8-->
+<!--
+<script>
+function day(){
+    let arrDays = ["Monday.","Tuesday.","Wednesday.","Thursday.","Friday.","Saturday.","Sunday."];
+    let i = 0;
+    do{
+        i++
+    }while(confirm(arrDays[i]+" Хотите увидить следующий день?"));
+}
+    day();
+</script>
+-->
+
+<!-------------------Task9-->
+<!--
+<script>
+ function calculation (){
+     let result;
+     for(let i=1;i<=10;i++){
+         for(let e=2;e<=9;e++){
+             result = i*e;
+              console.log(result);
+         }
+     }
+ }
+calculation();
+</script>
+-->
+
+<!-------------------Task10->
+<!--
+<script>
+     let array=[];
+     let ask=50;
+     let start=0;
+
+    function game(){
+        for(let i=0; i<=100;i++){
+            array.push(i);
+        }
+        for(let j=0; j<=10; ++j){
+            if(confirm('Ваше число<'+array[ask]+'?')){
+
+                array=array.slice(start,(Math.floor(array.length/2+1)));
+                ask=Math.floor(array.length/2);
+
+            }else if(confirm('Ваше число>'+array[ask]+'?')){
+
+                array=array.slice(ask);
+                ask=Math.floor(array.length/2);
+                start=array[array.length+1];
+
+            }else if(confirm('Ваше число='+array[ask]+'?')){
+                alert('конец игры');
+                break;
+
+            }else{
+                alert('Ваше число'+array[0]);
+                break;
+            }
+        }
+    }
+    game();
+</script>
+-->
+
+</body>
+</html>
